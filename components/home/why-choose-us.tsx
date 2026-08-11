@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { UserCheck, Layers, Cpu, HeartHandshake } from "lucide-react";
+import { UserCheck, Layers, Cpu, HeartHandshake, Sparkles } from "lucide-react";
 
 const reasons = [
   {
@@ -32,20 +32,21 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 lg:py-24 bg-brand-900 text-white relative overflow-hidden">
-      {/* Subtle Background Architectural Line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-site h-full border-x border-brand-700/20 pointer-events-none" />
+    <section className="py-20 lg:py-28 bg-[#06101E] text-white relative overflow-hidden">
+      {/* Subtle Background Radial Glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gold-500/5 blur-3xl pointer-events-none" />
 
-      <div className="max-w-site mx-auto px-4 lg:px-8 relative z-10 space-y-12">
-        <div className="text-center max-w-2xl mx-auto space-y-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-brand-100">
-            Why Patients Choose Us
-          </span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
-            The Bethesda Center Difference
+      <div className="max-w-site mx-auto px-4 lg:px-8 relative z-10 space-y-14">
+        <div className="text-center max-w-2xl mx-auto space-y-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-gold-400" />
+            <span>Why Patients Choose Us</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury font-normal text-white tracking-tight">
+            The Bethesda Center <span className="italic gold-gradient-text">Difference</span>
           </h2>
-          <p className="text-sm lg:text-base text-white/80">
-            A welcoming, established practice focused on patient relationships rather than corporate dental chains.
+          <p className="text-base text-white/70 font-light max-w-lg mx-auto">
+            A welcoming, established practice focused on genuine patient relationships rather than corporate dental chains.
           </p>
         </div>
 
@@ -55,19 +56,21 @@ export function WhyChooseUs() {
             return (
               <div
                 key={item.num}
-                className="bg-brand-700/30 rounded-2xl p-6 border border-brand-500/30 hover:border-brand-500 transition-colors flex flex-col justify-between"
+                className="glass-panel-dark rounded-2xl p-7 border border-gold-500/20 hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-mono font-bold text-brand-100 px-2.5 py-1 rounded bg-brand-700/80">
+                  <div className="flex items-center justify-between mb-5">
+                    <span className="text-xs font-serif-luxury font-bold text-gold-400 px-3 py-1 rounded-lg bg-gold-500/10 border border-gold-500/25">
                       {item.num}
                     </span>
-                    <Icon className="w-5 h-5 text-brand-500" />
+                    <div className="w-9 h-9 rounded-xl bg-gold-500/10 border border-gold-500/20 flex items-center justify-center text-gold-400 group-hover:scale-110 transition-transform">
+                      <Icon className="w-4 h-4" />
+                    </div>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2">
+                  <h3 className="text-lg font-serif-luxury font-semibold text-white mb-2.5 leading-snug">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-white/70 leading-relaxed">
+                  <p className="text-xs text-white/70 font-light leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

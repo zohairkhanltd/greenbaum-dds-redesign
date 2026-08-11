@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Star, Quote, ArrowRight } from "lucide-react";
+import { Star, Quote, ArrowRight, Sparkles } from "lucide-react";
 
 // Snapshot of verified patient reviews preserved from live source
 const verifiedReviews = [
@@ -46,25 +46,26 @@ const verifiedReviews = [
 
 export function ReviewsSection() {
   return (
-    <section className="py-16 lg:py-24 bg-white">
-      <div className="max-w-site mx-auto px-4 lg:px-8 space-y-12">
+    <section className="py-20 lg:py-28 bg-[#FAF9F6] relative overflow-hidden">
+      <div className="max-w-site mx-auto px-4 lg:px-8 space-y-16">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-brand-700">
-              Patient Feedback &amp; Stories
-            </span>
-            <h2 className="text-3xl lg:text-4xl font-extrabold text-ink-950 mt-1 tracking-tight">
-              Trusted by Bethesda families.
+          <div className="space-y-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-600 text-xs font-medium uppercase tracking-wider">
+              <Sparkles className="w-3.5 h-3.5 text-gold-500" />
+              <span>Patient Feedback &amp; Stories</span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-luxury text-ink-950 tracking-tight">
+              Trusted by <span className="italic gold-gradient-text">Bethesda families.</span>
             </h2>
           </div>
-          <div className="flex items-center gap-4 shrink-0">
-            <div className="flex items-center gap-1 text-amber-500">
+          <div className="flex items-center gap-4 shrink-0 p-4 rounded-2xl bg-white border border-gold-500/25 shadow-sm">
+            <div className="flex items-center gap-1 text-gold-500">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 fill-amber-500" />
+                <Star key={i} className="w-5 h-5 fill-gold-500 text-gold-500" />
               ))}
             </div>
-            <span className="text-sm font-bold text-ink-950">
-              5.0 Star Rated on Google
+            <span className="text-sm font-semibold text-ink-950">
+              5.0 Rating on Google
             </span>
           </div>
         </div>
@@ -82,25 +83,25 @@ export function ReviewsSection() {
           {verifiedReviews.map((rev) => (
             <div
               key={rev.name}
-              className="bg-brand-50/50 rounded-2xl p-6 border border-line flex flex-col justify-between"
+              className="bg-white rounded-2xl p-7 border border-gold-500/20 shadow-card hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group"
             >
-              <div className="space-y-3">
+              <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-1 text-amber-500">
+                  <div className="flex items-center gap-1 text-gold-500">
                     {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-amber-500" />
+                      <Star key={i} className="w-4 h-4 fill-gold-500 text-gold-500" />
                     ))}
                   </div>
-                  <Quote className="w-5 h-5 text-brand-700/30" />
+                  <Quote className="w-6 h-6 text-gold-500/30" />
                 </div>
-                <p className="text-xs lg:text-sm text-ink-600 leading-relaxed italic">
+                <p className="text-sm text-ink-600 font-light leading-relaxed italic font-serif-luxury text-base">
                   &ldquo;{rev.text}&rdquo;
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-line/60 flex items-center justify-between">
-                <span className="text-xs font-bold text-ink-950">{rev.name}</span>
-                <span className="text-[11px] text-ink-600 font-medium">
+              <div className="pt-5 mt-5 border-t border-gold-500/15 flex items-center justify-between">
+                <span className="text-xs font-semibold text-ink-950">{rev.name}</span>
+                <span className="text-[11px] text-gold-600 font-medium bg-gold-500/10 px-2.5 py-0.5 rounded-full border border-gold-500/20">
                   {rev.source}
                 </span>
               </div>
@@ -111,10 +112,10 @@ export function ReviewsSection() {
         <div className="text-center pt-4">
           <Link
             href="/new-patients/reviews"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-700 hover:text-brand-500 transition-colors"
+            className="inline-flex items-center gap-2.5 text-sm font-semibold text-gold-600 hover:text-gold-500 transition-colors group"
           >
             <span>Read All Verified Patient Reviews</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-gold-500 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
       </div>
