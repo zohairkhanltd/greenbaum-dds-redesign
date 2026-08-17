@@ -87,8 +87,8 @@ export function IntroSection() {
                 href="/about"
                 className="px-7 py-3.5 rounded-xl gold-shimmer-btn font-medium text-sm shadow-card flex items-center gap-2 group"
               >
-                <span className="gold-gradient-text font-semibold">About Our Practice</span>
-                <ArrowRight className="w-4 h-4 text-gold-400 transition-transform group-hover:translate-x-1" />
+                <span className="text-white font-bold">About Our Practice</span>
+                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
                 href="/about/technology"

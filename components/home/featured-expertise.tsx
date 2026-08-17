@@ -41,8 +41,8 @@ export function FeaturedExpertise() {
                 href="/services/cosmetic-dentistry"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl gold-shimmer-btn text-sm font-medium shadow-sm group/btn"
               >
-                <span className="gold-gradient-text font-semibold">Explore Cosmetic Dentistry</span>
-                <ArrowRight className="w-4 h-4 text-gold-400 transition-transform group-hover/btn:translate-x-1" />
+                <span className="text-white font-bold">Explore Cosmetic Dentistry</span>
+                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -84,8 +84,8 @@ export function FeaturedExpertise() {
                 href="/services/dental-implants"
                 className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl gold-shimmer-btn text-sm font-medium shadow-sm group/btn"
               >
-                <span className="gold-gradient-text font-semibold">Explore Dental Implants</span>
-                <ArrowRight className="w-4 h-4 text-gold-400 transition-transform group-hover/btn:translate-x-1" />
+                <span className="text-white font-bold">Explore Dental Implants</span>
+                <ArrowRight className="w-4 h-4 text-white transition-transform group-hover/btn:translate-x-1" />
               </Link>
             </div>
           </div>

@@ -26,10 +26,11 @@ export function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
 
   return (
     <div
-      className="absolute top-full left-0 w-full bg-white shadow-floating border-t border-line/80 z-50 transition-all duration-200"
+      className="absolute top-full left-0 w-full pt-2 z-50 transition-all duration-200 before:absolute before:-top-4 before:inset-x-0 before:h-5 before:content-['']"
       onMouseLeave={onClose}
     >
-      <div className="max-w-site mx-auto px-6 py-8">
+      <div className="bg-white shadow-floating border-t border-line/80">
+        <div className="max-w-site mx-auto px-6 py-8">
         <div className="grid grid-cols-12 gap-8">
           {/* Main Services Grid (8 columns) */}
           <div className="col-span-8">
@@ -103,5 +104,6 @@ export function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
         </div>
       </div>
     </div>
+  </div>
   );
 }

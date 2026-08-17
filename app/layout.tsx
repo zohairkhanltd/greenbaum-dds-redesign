@@ -1,26 +1,14 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter, Cormorant_Garamond } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppImageKitProvider } from "@/components/providers/imagekit-provider";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
-
 const inter = Inter({
   subsets: ["latin"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-const cormorantGaramond = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-serif",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -127,7 +115,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${plusJakartaSans.variable} ${inter.variable} ${cormorantGaramond.variable} scroll-smooth`}
+      className={`${inter.variable} scroll-smooth`}
     >
       <head>
         <script

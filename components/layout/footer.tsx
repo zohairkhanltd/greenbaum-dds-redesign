@@ -29,8 +29,8 @@ export function Footer() {
               href="/book"
               className="px-7 py-4 rounded-xl gold-shimmer-btn font-medium text-sm shadow-lg flex items-center gap-2 group"
             >
-              <span className="gold-gradient-text font-semibold">Reserve Your Visit</span>
-              <ArrowRight className="w-4 h-4 text-gold-400 transition-transform group-hover:translate-x-1" />
+              <span className="text-white font-bold">Reserve Your Visit</span>
+              <ArrowRight className="w-4 h-4 text-white transition-transform group-hover:translate-x-1" />
             </Link>
             <a
               href="tel:3018124946"

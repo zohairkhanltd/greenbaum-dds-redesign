@@ -40,6 +40,13 @@ export const media = {
       height: 800,
       isLocal: true,
     },
+    drGreenbaumCutout: {
+      src: "/images/doctors/dr-greenbaum-cutout.webp",
+      alt: "Dr. Bernard L. Greenbaum, DDS - Bethesda Dentist Portrait",
+      width: 600,
+      height: 800,
+      isLocal: true,
+    },
     drLuong: {
       src: "/images/doctors/dr-luong.jpg",
       alt: "Dr. Nhu Thuy H. Luong, DDS - Bethesda Dentist",
@@ -47,6 +54,13 @@ export const media = {
       height: 800,
       isLocal: true,
     },
+  },
+  heroImg: {
+    src: "/images/home/hero-img.webp",
+    alt: "Patient with perfect, radiant beaming smile",
+    width: 1200,
+    height: 1400,
+    isLocal: true,
   },
   customHero: {
     src: "/images/home/hero-luxury-suite.png",
@@ -114,6 +128,13 @@ export const media = {
     },
   },
   lifestyle: {
+    patientSmileCutout: {
+      src: "/images/lifestyle/patient-smile-cutout.webp",
+      alt: "Patient with perfect, radiant beaming smile",
+      width: 1200,
+      height: 800,
+      isLocal: true,
+    },
     happyWoman: {
       src: "/images/home/cosmetic-smile-luxury.png",
       alt: "Confident patient with healthy, radiant smile",

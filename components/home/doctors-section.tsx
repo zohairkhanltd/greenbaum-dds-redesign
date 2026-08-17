@@ -25,121 +25,123 @@ export function DoctorsSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
           {/* Dr. Greenbaum Card */}
-          <div className="bg-white rounded-3xl p-8 lg:p-10 border border-gold-500/25 shadow-card hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white rounded-3xl p-8 lg:p-10 border border-brand-100 shadow-card hover:border-brand-primary/40 transition-all duration-300 flex flex-col justify-between group">
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="relative w-36 h-48 rounded-2xl overflow-hidden border-2 border-gold-500 shrink-0 shadow-lg group-hover:scale-[1.02] transition-transform">
+                <div className="relative w-36 h-48 rounded-2xl overflow-hidden border-2 border-brand-primary shrink-0 shadow-lg group-hover:scale-[1.02] transition-transform bg-brand-50">
                   <AppImage
                     src={media.doctors.drGreenbaum.src}
                     alt={media.doctors.drGreenbaum.alt}
                     fill
                     isLocal
+                    priority
                     className="object-cover"
                   />
                 </div>
                 <div className="text-center sm:text-left space-y-2">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-600 text-[11px] font-medium uppercase tracking-wider">
+                  <span className="inline-block px-3 py-1 rounded-full bg-brand-50 border border-brand-100 text-brand-dark text-[11px] font-bold uppercase tracking-wider">
                     25+ Years Bethesda Practice
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif-luxury font-medium text-ink-950">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
                     Bernard L. Greenbaum, DDS
                   </h3>
-                  <p className="text-xs font-semibold text-gold-600">
+                  <p className="text-xs font-bold text-accent-gold">
                     Diplomate, American Board of Dental Sleep Medicine
                   </p>
-                  <p className="text-xs text-ink-600 font-light">
+                  <p className="text-xs text-ink-600 font-medium">
                     Georgetown University School of Dentistry &middot; AGD Fellow
                   </p>
                 </div>
               </div>
 
-              <p className="text-sm text-ink-600 font-light leading-relaxed">
+              <p className="text-sm text-ink-600 font-normal leading-relaxed">
                 With more than 25 years serving Bethesda, Dr. Greenbaum combines comprehensive general and cosmetic dentistry with specialized dental sleep medicine, helping patients breathe easier, sleep deeper, and protect their long-term oral health.
               </p>
 
-              <div className="space-y-2.5 text-xs text-ink-950 pt-4 border-t border-gold-500/15">
+              <div className="space-y-2.5 text-xs text-ink-950 pt-4 border-t border-brand-100">
                 <div className="flex items-center gap-2.5">
-                  <GraduationCap className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">Georgetown DDS &amp; LVI Advanced Dental Studies</span>
+                  <GraduationCap className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">Georgetown DDS &amp; LVI Advanced Dental Studies</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Moon className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">Diplomate, ABDSM (SomnoDent&reg; &amp; TAP&reg; Oral Appliance Specialist)</span>
+                  <Moon className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">Diplomate, ABDSM (SomnoDent&reg; &amp; TAP&reg; Oral Appliance Specialist)</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Award className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">Fellow, Academy of General Dentistry (FAGD)</span>
+                  <Award className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">Fellow, Academy of General Dentistry (FAGD)</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-gold-500/15">
+            <div className="pt-6 mt-6 border-t border-brand-100">
               <Link
                 href="/about/dr-greenbaum"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-gold-600 hover:text-gold-500 transition-colors group/link"
+                className="inline-flex items-center gap-2 text-sm font-bold text-brand-dark hover:text-brand-primary transition-colors group/link"
               >
                 <span>Read Biography &amp; Clinical Credentials</span>
-                <ArrowRight className="w-4 h-4 text-gold-500 transition-transform group-hover/link:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-brand-primary transition-transform group-hover/link:translate-x-1" />
               </Link>
             </div>
           </div>
 
           {/* Dr. Luong Card */}
-          <div className="bg-white rounded-3xl p-8 lg:p-10 border border-gold-500/25 shadow-card hover:border-gold-500/50 transition-all duration-300 flex flex-col justify-between group">
+          <div className="bg-white rounded-3xl p-8 lg:p-10 border border-brand-100 shadow-card hover:border-brand-primary/40 transition-all duration-300 flex flex-col justify-between group">
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="relative w-36 h-48 rounded-2xl overflow-hidden border-2 border-gold-500 shrink-0 shadow-lg group-hover:scale-[1.02] transition-transform">
+                <div className="relative w-36 h-48 rounded-2xl overflow-hidden border-2 border-accent-gold shrink-0 shadow-lg group-hover:scale-[1.02] transition-transform bg-brand-50">
                   <AppImage
                     src={media.doctors.drLuong.src}
                     alt={media.doctors.drLuong.alt}
                     fill
                     isLocal
+                    priority
                     className="object-cover"
                   />
                 </div>
                 <div className="text-center sm:text-left space-y-2">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-600 text-[11px] font-medium uppercase tracking-wider">
+                  <span className="inline-block px-3 py-1 rounded-full bg-accent-gold/15 border border-accent-gold/30 text-accent-gold-dark text-[11px] font-bold uppercase tracking-wider">
                     Invisalign&reg; Certified Provider
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-serif-luxury font-medium text-ink-950">
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-brand-dark">
                     Nhu Thuy H. Luong, DDS
                   </h3>
-                  <p className="text-xs font-semibold text-gold-600">
+                  <p className="text-xs font-bold text-brand-primary">
                     Omicron Kappa Upsilon National Dental Honor Society
                   </p>
-                  <p className="text-xs text-ink-600 font-light">
+                  <p className="text-xs text-ink-600 font-medium">
                     Howard University College of Dentistry &middot; LECOM AEGD Residency
                   </p>
                 </div>
               </div>
 
-              <p className="text-sm text-ink-600 font-light leading-relaxed">
+              <p className="text-sm text-ink-600 font-normal leading-relaxed">
                 Dr. Luong completed her DDS at Howard University with OKU honors and advanced residency training at LECOM. She delivers attentive, compassionate preventive, cosmetic, and clear aligner therapy.
               </p>
 
-              <div className="space-y-2.5 text-xs text-ink-950 pt-4 border-t border-gold-500/15">
+              <div className="space-y-2.5 text-xs text-ink-950 pt-4 border-t border-brand-100">
                 <div className="flex items-center gap-2.5">
-                  <GraduationCap className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">Howard University DDS &amp; LECOM AEGD Residency</span>
+                  <GraduationCap className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">Howard University DDS &amp; LECOM AEGD Residency</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Award className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">BS UCF, MS Barry University &amp; OKU Honor Society</span>
+                  <Award className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">BS UCF, MS Barry University &amp; OKU Honor Society</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <Award className="w-4 h-4 text-gold-500 shrink-0" />
-                  <span className="font-light">Invisalign&reg; Certified Provider</span>
+                  <Award className="w-4 h-4 text-brand-primary shrink-0" />
+                  <span className="font-medium">Invisalign&reg; Certified Provider</span>
                 </div>
               </div>
             </div>
 
-            <div className="pt-6 mt-6 border-t border-gold-500/15">
+            <div className="pt-6 mt-6 border-t border-brand-100">
               <Link
                 href="/about/dr-luong"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-gold-600 hover:text-gold-500 transition-colors group/link"
+                className="inline-flex items-center gap-2 text-sm font-bold text-brand-dark hover:text-brand-primary transition-colors group/link"
               >
                 <span>Read Biography &amp; Clinical Credentials</span>
-                <ArrowRight className="w-4 h-4 text-gold-500 transition-transform group-hover/link:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-brand-primary transition-transform group-hover/link:translate-x-1" />
               </Link>
             </div>
           </div>
