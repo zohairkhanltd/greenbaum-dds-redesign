@@ -56,7 +56,7 @@ export const media = {
     },
   },
   heroImg: {
-    src: "/images/home/hero-img.webp",
+    src: "/images/home/new-hero.webp",
     alt: "Patient with perfect, radiant beaming smile",
     width: 1200,
     height: 1400,

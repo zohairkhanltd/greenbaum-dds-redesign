@@ -19,15 +19,23 @@ import { serviceItems } from "@/lib/services-data";
 interface MegaMenuProps {
   isOpen: boolean;
   onClose: () => void;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
-export function MegaMenu({ isOpen, onClose }: MegaMenuProps) {
+export function MegaMenu({
+  isOpen,
+  onClose,
+  onMouseEnter,
+  onMouseLeave,
+}: MegaMenuProps) {
   if (!isOpen) return null;
 
   return (
     <div
-      className="absolute top-full left-0 w-full pt-2 z-50 transition-all duration-200 before:absolute before:-top-4 before:inset-x-0 before:h-5 before:content-['']"
-      onMouseLeave={onClose}
+      className="absolute top-full left-0 w-full pt-2 z-50 transition-all duration-200 pointer-events-auto before:absolute before:-top-6 before:inset-x-0 before:h-8 before:content-['']"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave || onClose}
     >
       <div className="bg-white shadow-floating border-t border-line/80">
         <div className="max-w-site mx-auto px-6 py-8">

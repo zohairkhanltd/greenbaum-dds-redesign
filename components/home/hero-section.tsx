@@ -106,25 +106,27 @@ export function HeroSection() {
           </div>
 
           {/* Right Hero Column (5 cols) - Prominent Hero Portrait with Ambient Glass Pedestal */}
-          <div className="lg:col-span-5 relative flex justify-center items-end mt-4 lg:mt-0 min-h-[460px] sm:min-h-[560px] lg:min-h-[640px] xl:min-h-[700px]">
-            {/* Ambient Glass Glow Backplate - Larger & Grand */}
-            <div className="absolute bottom-4 w-80 h-80 sm:w-[480px] sm:h-[480px] lg:w-[560px] lg:h-[560px] rounded-full bg-brand-primary/30 backdrop-blur-2xl border border-white/20 shadow-2xl pointer-events-none -z-10" />
-            <div className="absolute bottom-12 w-72 h-72 sm:w-[420px] sm:h-[420px] lg:w-[480px] lg:h-[480px] rounded-full bg-accent-teal/25 blur-3xl pointer-events-none -z-10" />
+          <div className="lg:col-span-5 relative flex justify-center items-center mt-4 lg:mt-0 min-h-[440px] sm:min-h-[520px] lg:min-h-[580px] xl:min-h-[620px] -mt-2 lg:-mt-6">
+            {/* Ambient Glass Glow Backplate - Centered & Grand */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] rounded-full bg-brand-primary/30 backdrop-blur-2xl border border-white/20 shadow-2xl pointer-events-none -z-10" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 sm:w-[400px] sm:h-[400px] lg:w-[460px] lg:h-[460px] rounded-full bg-accent-teal/25 blur-3xl pointer-events-none -z-10" />
 
             {/* Prominent Transparent Beaming Smile Cutout */}
-            <div className="relative w-full max-w-[420px] sm:max-w-[520px] lg:max-w-[600px] xl:max-w-[660px] h-[440px] sm:h-[540px] lg:h-[620px] xl:h-[680px] flex items-end drop-shadow-[0_25px_40px_rgba(0,0,0,0.55)]">
+            <div className="relative w-full max-w-[380px] sm:max-w-[480px] lg:max-w-[540px] xl:max-w-[580px] h-[380px] sm:h-[480px] lg:h-[540px] xl:h-[580px] flex items-center justify-center drop-shadow-[0_25px_40px_rgba(0,0,0,0.55)]">
               <AppImage
                 src={media.heroImg.src}
                 alt={media.heroImg.alt}
                 fill
                 isLocal
                 priority
-                className="object-contain object-bottom transition-transform duration-500 hover:scale-[1.02]"
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+                className="object-contain object-center transition-transform duration-500 hover:scale-[1.02]"
               />
             </div>
 
             {/* Floating Glassmorphism Patient Smile & Trust Badge */}
-            <div className="absolute -bottom-2 left-0 sm:left-2 right-0 sm:right-2 p-4 sm:p-4.5 rounded-2xl bg-brand-dark/90 backdrop-blur-xl border border-white/25 shadow-2xl flex items-center justify-between gap-3 z-20">
+            <div className="absolute -bottom-4 left-0 sm:left-2 right-0 sm:right-2 p-4 sm:p-4.5 rounded-2xl bg-brand-dark/90 backdrop-blur-xl border border-white/25 shadow-2xl flex items-center justify-between gap-3 z-20">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-accent-gold/20 border border-accent-gold flex items-center justify-center text-accent-gold shrink-0 font-extrabold text-xs shadow-inner">
                   <Sparkles className="w-4 h-4 text-accent-gold" />

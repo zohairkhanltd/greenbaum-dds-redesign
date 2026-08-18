@@ -24,10 +24,10 @@ export function AppImage({
   height,
   fill,
   className,
-  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
+  sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px",
   priority = false,
   isLocal = false,
-  quality = 85,
+  quality = 95,
 }: AppImageProps) {
   // Local asset or relative path starting with /brand or /images
   if (isLocal || src.startsWith("/brand") || src.startsWith("/images")) {

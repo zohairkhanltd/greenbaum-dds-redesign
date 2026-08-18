@@ -33,7 +33,9 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Hover Handlers with 150ms Grace Buffer
+  // Hover Handlers with 200ms Grace Buffer
+  const HOVER_DELAY = 200;
+
   const handlePracticeEnter = () => {
     if (practiceTimeoutRef.current) clearTimeout(practiceTimeoutRef.current);
     setPracticeDropdownOpen(true);
@@ -41,7 +43,7 @@ export function Header() {
   const handlePracticeLeave = () => {
     practiceTimeoutRef.current = setTimeout(() => {
       setPracticeDropdownOpen(false);
-    }, 150);
+    }, HOVER_DELAY);
   };
 
   const handlePatientsEnter = () => {
@@ -51,7 +53,7 @@ export function Header() {
   const handlePatientsLeave = () => {
     patientsTimeoutRef.current = setTimeout(() => {
       setPatientsDropdownOpen(false);
-    }, 150);
+    }, HOVER_DELAY);
   };
 
   const handleResourcesEnter = () => {
@@ -61,7 +63,7 @@ export function Header() {
   const handleResourcesLeave = () => {
     resourcesTimeoutRef.current = setTimeout(() => {
       setResourcesDropdownOpen(false);
-    }, 150);
+    }, HOVER_DELAY);
   };
 
   const handleMegaMenuEnter = () => {
@@ -71,7 +73,7 @@ export function Header() {
   const handleMegaMenuLeave = () => {
     megaMenuTimeoutRef.current = setTimeout(() => {
       setMegaMenuOpen(false);
-    }, 150);
+    }, HOVER_DELAY);
   };
 
   return (
@@ -324,15 +326,12 @@ export function Header() {
         </div>
 
         {/* Mega Menu Overlay */}
-        <div
+        <MegaMenu
+          isOpen={megaMenuOpen}
+          onClose={() => setMegaMenuOpen(false)}
           onMouseEnter={handleMegaMenuEnter}
           onMouseLeave={handleMegaMenuLeave}
-        >
-          <MegaMenu
-            isOpen={megaMenuOpen}
-            onClose={() => setMegaMenuOpen(false)}
-          />
-        </div>
+        />
       </header>
 
       {/* Mobile Nav Drawer */}
